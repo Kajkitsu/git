@@ -6,7 +6,7 @@
 
     <title>Git</title>
     <meta name="description" content="Git">
-    <meta name="author" content="Michał Kawecki">
+    <meta name="author" content="Norbert Waszkowiak">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -22,166 +22,248 @@
 
 <body>
 
-<div class="reveal">
+    <div class="reveal">
 
-    <div class="slides">
-        <section>
-            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="git logo"
-                 style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
-            <h2>Git</h2>
-            <p>
-                <small>Czyli jak nie narobić gnoju w repozytorium</a></small>
-            </p>
-        </section>
-
-        <section>
-            <h3>
-                Rozproszony system kontroli wersji
-            </h3>
-
-            <ul>
-                <li>śledzenie wszystkich zmian dokonywanych w plikach</li>
-                <li>możliwość przywrócenia poprzedniej wersji pliku</li>
-                <li>współdzielenie plików z innymi</li>
-                <li>łączenie zmian dokonywanych w plikach przez wiele osób w różnym czasie</li>
-                <li>obsługa dużych projektów</li>
-            </ul>
-        </section>
-
-        <section>
+        <div class="slides">
             <section>
-                <h3>Podstawy</h3>
-                <h4>
-                    Git przechowuje dane jako zestaw migawek (snapshot).
-                </h4>
-                <img src="https://git-scm.com/book/en/v2/images/snapshots.png"
-                     style="height: 200px;">
+                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="git logo"
+                    style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+                <h2>Git</h2>
                 <p>
-                    Za każdym razem gdy wprowadzamy zmianę do projektu, Git tworzy obraz przedstawiający to jak
-                    wyglądają pliki w danym momencie.
+                    <small>Czyli jak nie narobić 💩 w repozytorium</a></small>
                 </p>
             </section>
-            <section>
-                <h4>Niemal każda operacja jest lokalna</h4>
-                <p>Większość operacji jakie przeprowadzamy wymaga jedynie dostępu do lokalnych plików i zasobów.</p>
-            </section>
-            <section>
-                <h4>Git wyłącznie dodaje nowe dane</h4>
-                <p>Wykonując pracę niemal zawsze jedynie dodajemy dane do bazy danych Git.</p>
-                <p>Pozwala to na eksperymentowanie bez ryzyka - zawsze możemy wrócić do poprzedniej wersji projektu.</p>
-            </section>
-            <section>
-                <h4>Stany</h4>
-                <img src="https://git-scm.com/book/en/v2/images/areas.png" style="height: 250px;">
-                <p>
-                <ul>
-                    <li>zmodyfikowany</li>
-                    <li>śledzony</li>
-                    <li>zatwierdzony</li>
-                </ul>
-                </p>
-            </section>
-        </section>
+            <aside class="notes">
+                Rozproszony system kontroli wersji to narzędzie, które pozwala na:
 
-        <section>
+                - Śledzenie wszystkich zmian dokonywanych w plikach: Możesz zobaczyć, kto, kiedy i co zmienił w
+                danym pliku.
+                - Możliwość przywrócenia poprzedniej wersji pliku: Jeśli popełnisz błąd lub zechcesz wrócić do
+                wcześniejszej wersji pliku,
+                możesz to zrobić bez problemu.
+                - Współdzielenie plików z innymi: Możesz udostępniać swoje pliki innym osobom i pracować nad nimi
+                wspólnie.
+                - Łączenie zmian dokonywanych w plikach przez wiele osób w różnym czasie: System automatycznie
+                połączy zmiany wprowadzone
+                przez różnych użytkowników, nawet jeśli pracowali oni nad tymi samymi plikami w tym samym czasie.
+                - Obsługa dużych projektów: System jest skalowalny i może obsługiwać nawet bardzo duże projekty.
+            </aside>
+
             <section>
-                <h3>Instalacja</h3>
-                <p>Standardowy sposób instalacji w systemie Linux opartym na Debianie (np. Ubuntu).</p>
-                <pre><code>$ sudo apt-get install git</code></pre>
-            </section>
-            <section>
-                <h4>Konfiguracja</h4>
-                <p>Konfiguracja przetrzymywana jest w trzech miejscach:
+                <h3>
+                    Rozproszony system kontroli wersji
+                </h3>
+
                 <ul>
-                    <li>
-                        <pre>/etc/gitconfig</pre>
-                    </li>
-                    <li>
-                        <pre>~/.gitconfig</pre>
-                    </li>
-                    <li>
-                        <pre>.git/config (w repozytorium)</pre>
-                    </li>
+                    <li>śledzenie wszystkich zmian dokonywanych w plikach</li>
+                    <li>możliwość przywrócenia poprzedniej wersji pliku</li>
+                    <li>współdzielenie plików z innymi</li>
+                    <li>łączenie zmian dokonywanych w plikach przez wiele osób w różnym czasie</li>
+                    <li>obsługa dużych projektów</li>
                 </ul>
-                </p>
+                <aside class="notes">
+                    Rozproszony system kontroli wersji to narzędzie, które pozwala na:
+
+                    - Śledzenie wszystkich zmian dokonywanych w plikach: Możesz zobaczyć, kto, kiedy i co zmienił w
+                    danym pliku.
+                    - Możliwość przywrócenia poprzedniej wersji pliku: Jeśli popełnisz błąd lub zechcesz wrócić do
+                    wcześniejszej wersji pliku,
+                    możesz to zrobić bez problemu.
+                    - Współdzielenie plików z innymi: Możesz udostępniać swoje pliki innym osobom i pracować nad nimi
+                    wspólnie.
+                    - Łączenie zmian dokonywanych w plikach przez wiele osób w różnym czasie: System automatycznie
+                    połączy zmiany wprowadzone
+                    przez różnych użytkowników, nawet jeśli pracowali oni nad tymi samymi plikami w tym samym czasie.
+                    - Obsługa dużych projektów: System jest skalowalny i może obsługiwać nawet bardzo duże projekty.
+                </aside>
+
             </section>
+
             <section>
-                <h4>Ustawienia tożsamości</h4>
-                <pre><code data-trim>
+                <section>
+                    <h3>Podstawy</h3>
+                    <h4>
+                        Git przechowuje dane jako zestaw migawek (snapshot).
+                    </h4>
+                    <img src="https://git-scm.com/book/en/v2/images/snapshots.png" style="height: 200px;">
+                    <p>
+                        Za każdym razem gdy wprowadzamy zmianę do projektu, Git tworzy obraz przedstawiający to jak
+                        wyglądają pliki w danym momencie.
+                    </p>
+                    <aside class="notes">
+                        Migawki (snapshots)
+
+                        Git przechowuje dane w postaci migawek, czyli obrazów całego projektu w danym momencie. Za
+                        każdym razem, gdy wprowadzamy
+                        zmianę do projektu i zatwierdzamy ją (commit), Git tworzy nową migawkę, która zawiera:
+
+                        Spis wszystkich plików w projekcie: Git zapisuje nazwę, rozmiar i sumę kontrolną każdego pliku.
+                        Drzewo katalogów: Git zapisuje strukturę katalogów w projekcie.
+                        Treść każdego pliku: Git zapisuje treść każdego pliku, który został zmieniony od ostatniej
+                        migawki.
+
+                        Zalety przechowywania danych jako migawek:
+
+                        Efektywność: Git nie musi przechowywać całej historii zmian dla każdego pliku. Zamiast tego
+                        przechowuje tylko różnice
+                        między kolejnymi migawkami.
+                        Integralność: Migawki są odporne na uszkodzenia. Jeśli jedna migawka ulegnie uszkodzeniu,
+                        pozostałe pozostaną
+                        nienaruszone.
+                        Łatwość dostępu: Możemy łatwo przeglądać i przywracać dowolną migawkę.
+                    </aside>
+                </section>
+                <section>
+                    <h4>Niemal każda operacja jest lokalna</h4>
+                    <p>Większość operacji jakie przeprowadzamy wymaga jedynie dostępu do lokalnych plików i zasobów.</p>
+                </section>
+                <section>
+                    <h4>Git wyłącznie dodaje nowe dane</h4>
+                    <p>Wykonując pracę niemal zawsze jedynie dodajemy dane do bazy danych Git.</p>
+                    <p>Pozwala to na eksperymentowanie bez ryzyka - zawsze możemy wrócić do poprzedniej wersji projektu.
+                    </p>
+                </section>
+                <section>
+                    <h4>Stany</h4>
+                    <img src="https://git-scm.com/book/en/v2/images/areas.png" style="height: 250px;">
+                    <p>
+                    <ul>
+                        <li>zmodyfikowany</li>
+                        <li>śledzony</li>
+                        <li>zatwierdzony</li>
+                    </ul>
+                    </p>
+                    <aside class="notes">
+                        Stany plików w Gicie:
+                        1. Zmodyfikowany:
+
+                        Plik jest zmodyfikowany, jeśli jego zawartość uległa zmianie od ostatniego zatwierdzenia
+                        (commit). Zmodyfikowane pliki
+                        nie są śledzone przez Gita i nie są częścią repozytorium.
+
+                        2. Śledzony:
+
+                        Plik jest śledzony, jeśli jest częścią repozytorium i jego zmiany są monitorowane przez Gita.
+                        Śledzone pliki mogą być
+                        zmodyfikowane lub niezmodyfikowane.
+
+                        3. Zatwierdzony:
+
+                        Plik jest zatwierdzony, jeśli jego zmiany zostały zapisane w repozytorium. Zatwierdzone pliki są
+                        niezmienne i nie można
+                        ich modyfikować bez utworzenia nowej wersji.
+
+                        Przejścia między stanami:
+
+                        Zmodyfikowany -> Śledzony: Plik staje się śledzony, gdy dodamy go do repozytorium za pomocą
+                        polecenia git add.
+                        Śledzony -> Zmodyfikowany: Plik staje się zmodyfikowany, gdy jego zawartość ulegnie zmianie.
+                        Zmodyfikowany -> Zatwierdzony: Plik staje się zatwierdzony, gdy zatwierdzimy zmiany za pomocą
+                        polecenia git commit.
+                        Zatwierdzony -> Śledzony: Zatwierdzone pliki nie mogą zostać zmienione bez utworzenia nowej
+                        wersji.
+                        Dodatkowe stany:
+
+                        Nieśledzony: Plik nie jest śledzony przez Gita i nie jest częścią repozytorium.
+                        Zignorowany: Plik jest ignorowany przez Gita i nie jest śledzony ani dodawany do repozytorium.
+                    </aside>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Instalacja</h3>
+                    <p>Standardowy sposób instalacji w systemie Linux opartym na Debianie (np. Ubuntu).</p>
+                    <pre><code>$ sudo apt-get install git</code></pre>
+                </section>
+                <section>
+                    <h4>Ustawienia tożsamości</h4>
+                    <pre><code data-trim>
                 $ git config --global user.name "John Doe"
                 $ git config --global user.email johndoe@example.com
                 </code></pre>
-            </section>
-            <section>
-                <h4>Aliasy</h4>
-                <p>Nie ma potrzeby pamiętania długich, skomplikowanych komend. Można skorzystać z aliasów:</p>
-                <pre><code data-trim>
+                    <aside class="notes">
+                        Ustawienia tożsamości w Git określają, jak będziemy identyfikowani w commitach i innych
+                        operacjach Git. Składają się na
+                        nie dwa główne elementy:
+
+                        Nazwa użytkownika:, czyli identyfikator, który będzie wyświetlany w commitach i innych
+                        operacjach
+                        Git. Domyślnie jest ona ustawiana na nazwę użytkownika Twojego konta systemowego.
+                        Adres e-mail, czyli adres, na który będą wysyłane powiadomienia o commitach i innych
+                        operacjach.
+                    </aside>
+                </section>
+                <section>
+                    <h4>Aliasy</h4>
+                    <p>Nie ma potrzeby pamiętania długich, skomplikowanych komend. Można skorzystać z aliasów:</p>
+                    <pre><code data-trim>
                 $ git config --global alias.co checkout
                 $ git config --global alias.br branch
                 $ git config --global alias.ci commit
                 $ git config --global alias.st status
                 </code></pre>
-            </section>
-            <section>
-                <h4>Podgląd ustawień</h4>
-                <pre><code data-trim>$ git config --list</code></pre>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>Podgląd ustawień</h4>
+                    <pre><code data-trim>$ git config --list</code></pre>
+                    <pre><code data-trim>
                     alias.co=checkout
                     alias.br=branch
                     alias.ci=commit
                     alias.st=status
                     alias.unstage=reset HEAD --
                     alias.last=log -1 HEAD
-                    user.email=m.kawecki@sages.com.pl
-                    user.name=Michał Kawecki</code>
+                    user.email=norbert.waszkowiak@wat.edu.pl
+                    user.name=Norbert Waszkowiak</code>
                 </pre>
+                </section>
+                <section>
+                    <h4>Uwierzytelnianie</h4>
+                    <p>Warto wymienić się kluczem ssh z serwisem hostingowym, na którym znajdują się repozytoria.</p>
+                    <img src="assets/ssh.png" style="height: 300px;">
+                </section>
             </section>
             <section>
-                <h4>Uwierzytelnianie</h4>
-                <p>Warto wymienić się kluczem ssh z serwisem hostingowym, na którym znajdują się repozytoria.</p>
-                <img src="assets/ssh.png" style="height: 300px;">
-            </section>
-        </section>
-        <section>
-            <section>
-                <h3>git init</h3>
-                <p>Tworzymy nowe repozytorium gita</p>
-            </section>
-            <section>
-                <h4>git clone</h4>
-                <p>Klonujemy istniejące repozytorium</p>
-            </section>
-            <section>
-                <h4>git add</h4>
-                <p>Dodajemy pliki do "poczekalni"</p>
-            </section>
-            <section>
-                <h4>git commit</h4>
-                <p>Zatwierdzamy zmiany (tworzymy commita)</p>
-                <pre><code data-trim>$ git commit -m "&lt;treść commita&gt;"</code></pre>
-            </section>
-            <section>
-                <h4>git status</h4>
-                <p>Sprawdzamy status repozytorium</p>
-                <img src="assets/git-status.png">
-            </section>
-            <section>
-                <h4>git log</h4>
-                <p>Sprawdzamy historię zmian</p>
-                <pre><code data-trim>
+                <section>
+                    <h3>git init</h3>
+                    <p>Tworzymy nowe repozytorium gita</p>
+                </section>
+                <section>
+                    <h4>git clone</h4>
+                    <p>Klonujemy istniejące repozytorium</p>
+                </section>
+                <section>
+                    <h4>git add</h4>
+                    <p>Dodajemy pliki do "poczekalni"</p>
+                </section>
+                <section>
+                    <h4>git commit</h4>
+                    <p>Zatwierdzamy zmiany (tworzymy commita)</p>
+                    <pre><code data-trim>$ git commit -m "&lt;treść commita&gt;"</code></pre>
+                </section>
+                <section>
+                    <h4>git status</h4>
+                    <p>Sprawdzamy status repozytorium</p>
+                    <img src="assets/git-status.png">
+                </section>
+                <section>
+                    <h4>git log</h4>
+                    <p>Sprawdzamy historię zmian</p>
+                    <pre><code data-trim>
                 ~/work/sages master > git log
 
                 commit 3f2330dcbe4219835ab81b35f93a86710205b520 (HEAD -&gt; master)
-                Author: Michał Kawecki &lt;m.kawecki@sages.com.pl&gt;
+                Author: Norbert Waszkowiak &lt;norbert.waszkowiak@wat.edu.pl&gt;
                 Date:   Wed Jun 22 15:29:06 2022 +0200
 
                     Initial commit
                 </code></pre>
-            </section>
-            <section>
-                <h4>git diff</h4>
-                <p>Porównujemy zmiany</p>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>git diff</h4>
+                    <p>Porównujemy zmiany</p>
+                    <pre><code data-trim>
                 ~/work/sages master !1 > git diff
 
                 diff --git a/hasla.txt b/hasla.txt
@@ -193,35 +275,35 @@
                 -mkaminski;m4ttek123
                 +mstone;m4ttek123
                 </code></pre>
+                </section>
             </section>
-        </section>
 
-        <section>
             <section>
-                <h3>git revert</h3>
-                <p>Wycofujemy zmiany</p>
-                <pre><code data-trim>
+                <section>
+                    <h3>git revert</h3>
+                    <p>Wycofujemy zmiany</p>
+                    <pre><code data-trim>
                 ~/work/sages master > git revert 47f8cfc6f7592320365bcc55d0a5b50f2a844773
 
                 [master 20a9cda] Revert "Random commit"
                  1 file changed, 1 deletion(-)
                  delete mode 100644 hasla.txt
                 </code></pre>
-            </section>
-            <section>
-                <h4>git reset</h4>
-                <p>Resetujemy zmiany</p>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>git reset</h4>
+                    <p>Resetujemy zmiany</p>
+                    <pre><code data-trim>
                 ~/work/sages master > git reset 47f8cfc6f7592320365bcc55d0a5b50f2a844773
 
                 Unstaged changes after reset:
                 D	hasla.txt
                 </code></pre>
-            </section>
-            <section>
-                <h4>git restore</h4>
-                <p>Przywracanie zmian</p>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>git restore</h4>
+                    <p>Przywracanie zmian</p>
+                    <pre><code data-trim>
                  ~/work/sages master !1 > git status
                 On branch master
                 Changes not staged for commit:
@@ -237,140 +319,346 @@
                 On branch master
                 nothing to commit, working tree clean
                 </code></pre>
+                </section>
             </section>
-        </section>
 
-        <section>
             <section>
-                <h3>git commit --amend</h3>
-                <p>Modyfikujemy commita</p>
-                <pre><code data-trim>
+                <section>
+                    <h3>git commit --amend</h3>
+                    <p>Modyfikujemy commita</p>
+                    <pre><code data-trim>
                 $ git commit --amend
                 </code></pre>
-            </section>
-            <section>
-                <h4>git rebase</h4>
-                <p>Przemieszczamy commity</p>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>git rebase</h4>
+                    <p>Przemieszczamy commity</p>
+                    <pre><code data-trim>
                 $ git rebase &lt;nazwa brancha&gt;
                 </code></pre>
+                </section>
             </section>
-        </section>
 
-        <section>
             <section>
-                <h3>git branch</h3>
-                <p>Zarządzamy branchami</p>
-                <pre><code data-trim>
+                <section>
+                    <h3>git branch</h3>
+                    <p>Zarządzamy branchami</p>
+                    <pre><code data-trim>
                 $ git branch
                 </code></pre>
-            </section>
-            <section>
-                <h4>git checkout</h4>
-                <p>Przełączamy się między branchami</p>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>git checkout</h4>
+                    <p>Przełączamy się między branchami</p>
+                    <pre><code data-trim>
                 $ git checkout &lt;nazwa brancha&gt;
                 </code></pre>
-            </section>
-            <section>
-                <h4>git merge</h4>
-                <p>Scalamy branche</p>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>git merge</h4>
+                    <p>Scalamy branche</p>
+                    <pre><code data-trim>
                 $ git merge &lt;nazwa brancha&gt;
                 </code></pre>
+                </section>
             </section>
-        </section>
 
-        <section>
             <section>
-                <h3>git remote</h3>
-                <p>Zarządzamy repozytoriami zdalnymi</p>
-                <pre><code data-trim>
+                <section>
+                    <h3>git remote</h3>
+                    <p>Zarządzamy repozytoriami zdalnymi</p>
+                    <pre><code data-trim>
                 $ git remote
                 </code></pre>
-            </section>
-            <section>
-                <h4>git pull</h4>
-                <p>Pobieramy zmiany z repozytorium zdalnego</p>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>git pull</h4>
+                    <p>Pobieramy zmiany z repozytorium zdalnego</p>
+                    <pre><code data-trim>
                 $ git pull
                 </code></pre>
-            </section>
-            <section>
-                <h4>git push</h4>
-                <p>Przesyłamy zmiany do repozytorium zdalnego</p>
-                <pre><code data-trim>
+                </section>
+                <section>
+                    <h4>git push</h4>
+                    <p>Przesyłamy zmiany do repozytorium zdalnego</p>
+                    <pre><code data-trim>
                 $ git push
                 </code></pre>
+                </section>
             </section>
-        </section>
 
-        <section>
-            <h3>Tagi</h3>
-            <p>Specjalne oznaczenie poszczególnych punktów w historii repozytorium, które są szczególnie ważne.</p>
-            <p>Zazwyczaj wykorzystywane do oznaczania wydawanych wersji. Rozróżniamy dwa typy tagów:</p>
-            <ul>
-                <li>lightweight</li>
-                <li>annotated</li>
-            </ul>
-            <pre><code data-trim>
+            <section>
+                <h3>Tagi</h3>
+                <p>Specjalne oznaczenie poszczególnych punktów w historii repozytorium, które są szczególnie ważne.</p>
+                <p>Zazwyczaj wykorzystywane do oznaczania wydawanych wersji. Rozróżniamy dwa typy tagów:</p>
+                <ul>
+                    <li>lightweight</li>
+                    <li>annotated</li>
+                </ul>
+                <pre><code data-trim>
             $ git tag -a v1.4 -m "my version 1.4"
             </code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h3>HEAD</h3>
-            <p>Wskazanie na miejsce w repozytorium (branch/commit) na którym się "znajdujemy"</p>
-            <pre><code data-trim>
+            <section>
+                <h3>HEAD</h3>
+                <p>Wskazanie na miejsce w repozytorium (branch/commit) na którym się "znajdujemy"</p>
+                <pre><code data-trim>
             ~/work/sages master *1 > cat .git/HEAD
             ref: refs/heads/master
             </code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h3>Merge vs. rebase</h3>
-            <img src="assets/mergevsrebase.png">
-        </section>
-
-        <section>
             <section>
-                <h3>Commitowanie</h3>
-                <img src="assets/gitcommits.png">
+                <section>
+                    <h3>Merge vs. rebase</h3>
+
+                    <img src="assets/mergevsrebase.png">
+                    <aside class="notes">
+                        Polecenie git merge łączy zmiany z dwóch gałęzi w jedną. Git tworzy nowy commit, który łączy
+                        zmiany z obu gałęzi.
+                        Historia commitów staje się liniowa, ale zawiera dodatkowy commit scalania.
+
+
+                        Polecenie git rebase przenosi commity z jednej gałęzi na drugą. Git przepisuje historię
+                        commitów, tak aby commity z
+                        jednej gałęzi wyglądały, jakby były wykonane na drugiej gałęzi.
+                    </aside>
+                </section>
+                <section>
+                    <h3>git merge</h3>
+                    <h4>Zalety</h4>
+                    <small>
+                        <ul>
+                            <li>Łatwe do zrozumienia i proste do wykonania.</li>
+                            <li>Utrzymuje historię commitów w czytelnej formie.</li>
+                            <li>Pozwala na łatwe śledzenie zmian w różnych gałęziach.</li>
+                        </ul>
+                    </small>
+                </section>
+                <section>
+                    <h3>git merge</h3>
+                    <h4>Wady</h4>
+                    <small>
+                        <ul>
+                            <li>Tworzy dodatkowy commit scalania, który może zaśmiecać historię commitów.</li>
+                            <li>Może prowadzić do konfliktów scalania, które należy ręcznie rozwiązać.</li>
+                        </ul>
+                    </small>
+                </section>
+                <section>
+                    <h3>git rebase</h3>
+                    <h4>Zalety</h4>
+                    <small>
+                        <ul>
+                            <li>Przenosi zmiany z jednej gałęzi na drugą</li>
+                            <li>Historia jest bardziej liniowa, chronologicznie </li>
+                            <li>Pozwala na uniknięcie konfliktów scalania.</li>
+                        </ul>
+                    </small>
+                </section>
+                <section>
+                    <h3>git rebase</h3>
+                    <h4>Wady</h4>
+                    <small>
+                        <ul>
+                            <li>Może być trudniejsze do zrozumienia i wykonania niż merge.</li>
+                            <li>Może prowadzić do utraty informacji o historii commitów.</li>
+                            <li>Należy używać go ostrożnie w przypadku gałęzi, które zostały udostępnione innym osobom.
+                            </li>
+                        </ul>
+                    </small>
+                </section>
+            </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h3>Commitowanie</h3>
+                    <img src="assets/gitcommits.png">
+                </section>
+                <section>
+                    <p>Rozsądny podział.</p>
+                    <p>Commitujemy często.</p>
+                    <p>Nie commitujemy "w połowie".</p>
+                    <aside class="notes">
+                        Rozsądny podział:
+
+                        Dziel duże zmiany na mniejsze, łatwiejsze do zarządzania commity.
+                        Każdy commit powinien zawierać logicznie powiązane zmiany.
+                        Ułatwi to śledzenie zmian i rozwiązywanie problemów.
+                        2. Commitujemy często:
+
+                        Nie czekaj z commitowaniem do momentu zakończenia całego projektu.
+                        Commituj regularnie, aby zachować historię zmian i móc łatwo się do niej cofnąć.
+                        Ułatwi to również współpracę z innymi osobami.
+                        3. Nie commitujemy "w połowie":
+
+                        Nie commituj nieskończonych lub niestabilnych zmian.
+                        Commity powinny zawierać tylko ukończone i przetestowane zmiany.
+                        Zapobiegnie to problemom z kompilacją i działaniem projektu.
+                    </aside>
+                </section>
+                <section>
+                    <p>Używamy gałęzi.</p>
+                    <p>Nazwy commitów są ważne.</p>
+                    <aside class="notes">
+                        4. Używamy gałęzi:
+
+                        Używaj gałęzi do izolowania różnych zmian.
+                        Gałąź master powinna zawierać tylko stabilne i gotowe do wydania zmiany.
+                        Inne gałęzie mogą służyć do testowania nowych funkcji lub eksperymentowania.
+                        5. Nazwy commitów są ważne:
+
+                        Używaj krótkich i opisowych nazw commitów.
+                        Nazwa commitu powinna odzwierciedlać wprowadzone zmiany.
+                        Ułatwi to wyszukiwanie i zrozumienie historii commitów.
+                    </aside>
+                </section>
+                <section>
+                    <h3>Na przykład:</h3>
+                    <ul>
+                        <li>"Dodano funkcję X"</li>
+                        <li>"Naprawiono błąd Y"</li>
+                        <li>"Zaktualizowano bibliotekę Z"</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h3>Rozwiązywanie konfliktów</h3>
+                <img
+                    src="https://www.jetbrains.com/idea/guide/static/e3a69c2cb436b132149bee0b521b89b0/1ac29/merge-revisions-dialog.png">
             </section>
             <section>
-                <p>Rozsądny podział.</p>
-                <p>Commitujemy często.</p>
-                <p>Nie commitujemy "w połowie".</p>
+                <section>
+                    <h3>Github Desktop</h3>
+                    <h4>Instalacja na Ubuntu</h4>
+                    <pre style="font-size: 16px" data-id="code-animation"><code class="hljs bash" data-trim><script type="text/template">
+                    ## Direct copy-paste from official instrubtions
+                    ## Github Desktop for Ubuntu
+                    ## Get the @shiftkey package feed
+                    wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
+                    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg]https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
+                    ## Install Github Desktop for Ubuntu
+                    sudo apt update && sudo apt install github-desktop
+                    </script></code></pre>
+                </section>
+                <section>
+                    <h3>Github Desktop</h3>
+                    <h4>Instalacja na Windows</h4>
+                    <p><a href="https://central.github.com/deployments/desktop/desktop/latest/win32">Link</a></p>
+                </section>
+                <section>
+                    <h4>Wykonywanie operacji znanych z terminala:</h4>
+                    <ul>
+                        <li>Zatwierdzanie zmian (commit)</li>
+                        <li>Pobieranie zmian (pull)</li>
+                        <li>Wysyłanie zmian (push)</li>
+                        <li>Rozwiązywanie konfliktów</li>
+                        <li>Tworzenie i scalanie gałęzi (branching)</li>
+                    </ul>
+                </section>
             </section>
             <section>
-                <p>Używamy gałęzi.</p>
-                <p>Nazwy commitów są ważne.</p>
+                <section>
+                    <h3>Git flow</h3>
+                    <img src="assets/gitflow.png">
+                    <aside class="notes">
+                        Gitflow to model przepływu pracy, który pomaga w zarządzaniu repozytoriami Git w sposób
+                        zorganizowany i wydajny. Opiera
+                        się na użyciu gałęzi do izolowania różnych etapów rozwoju projektu.
+                    </aside>
+                </section>
+                <section>
+                    <ul>
+                        <li><b>master</b>: Zawiera stabilny kod, gotowy do wydania.</li>
+                        <li><b>develop</b>: Służy do rozwijania nowych funkcji i testowania ich przed wydaniem.</li>
+                        <li><b>feature</b>: Używane do tworzenia i testowania nowych funkcji.</li>
+                        <li><b>release</b>: Służy do przygotowania wersji do wydania.</li>
+                        <li><b>hotfix</b>: Używane do naprawiania błędów w wydanych wersjach.</li>
+                    </ul>
+                </section>
+                <section>
+                    <img src="assets/gitflow.png">
+                    <aside class="notes">
+                        1. Nowa funkcja jest tworzona w gałęzi feature.
+                        2. Po zakończeniu funkcji gałąź feature jest scalana z gałęzią develop.
+                        3. Gałąź develop jest regularnie testowana i integrowana z gałęzią master.
+                        4. Kiedy nowa wersja jest gotowa do wydania, gałąź develop jest scalana z gałęzią release.
+                        5. W gałęzi release są tworzone tagi i artefakty wydania.
+                        6. Wydanie jest publikowane z gałęzi release.
+                        7. Błędy w wydanych wersjach są naprawiane w gałęziach hotfix, a następnie scalane z gałęziami
+                        master i develop.
+                    </aside>
+
+                </section>
             </section>
-        </section>
-
-        <section>
-            <h3>Rozwiązywanie konfliktów</h3>
-            <img src="https://www.jetbrains.com/idea/guide/static/e3a69c2cb436b132149bee0b521b89b0/1ac29/merge-revisions-dialog.png">
-        </section>
-
+            <section>
+                <h2>Podsumowanie</h2>
+                <h3>Najważniejsze cechy Gita</h3>
+                <section>
+                    <h4>Kontrola wersji</h4>
+                    <ul>
+                        <li>Śledzenie zmian w plikach i kodzie.</li>
+                        <li>Możliwość przywracania poprzednich wersji.</li>
+                        <li>Przeglądanie historii zmian.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Współpraca</h4>
+                    <ul>
+                        <li>Wspólna praca nad projektami.</li>
+                        <li>Łączenie zmian z różnych gałęzi.</li>
+                        <li>Możliwość komentowania i recenzowania kodu.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Efektywność</h4>
+                    <ul>
+                        <li>Ułatwione zarządzanie projektami.</li>
+                        <li>Możliwość tworzenia i scalania gałęzi.</li>
+                        <li>Automatyzacja powtarzalnych zadań.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Dostępność</h4>
+                    <ul>
+                        <li>Darmowy i otwarty kod źródłowy.</li>
+                        <li>Dostępny na różnych platformach.</li>
+                        <li>Duża społeczność użytkowników i programistów.</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h3>Dodatkowe materiały</h3>
+                <p><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">
+                        git-scm.com Recording Changes to the Repository</a></p>
+                <p><a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">
+                        git-scm.com Viewing the Commit History</a></p>
+                <p><a href="https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things">
+                        git-scm.com Undoing Things</a></p>
+            </section>
+        </div>
     </div>
-</div>
 
-<script src="dist/reveal.js"></script>
-<script src="plugin/zoom/zoom.js"></script>
-<script src="plugin/notes/notes.js"></script>
-<script src="plugin/search/search.js"></script>
-<script src="plugin/markdown/markdown.js"></script>
-<script src="plugin/highlight/highlight.js"></script>
-<script>
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        center: true,
-        hash: true,
-        plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
-    });
-</script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+        });
+    </script>
 
 </body>
+
 </html>
